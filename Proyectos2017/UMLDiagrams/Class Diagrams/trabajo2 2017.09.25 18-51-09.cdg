@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="trabajo2">
+  <ClassDiagramComponents>
+    <Class name="Lista_Enlasada_Dobles" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="cabeza" type="Nodo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCabeza" returnType="Nodo" visibility="public"/>
+        <Method name="setCabeza" returnType="void" visibility="public">
+          <Argument type="Nodo" name="cab"/>
+        </Method>
+        <Method name="ValidarID" returnType="boolean" visibility="public">
+          <Argument type="Nodo" name="nd"/>
+        </Method>
+        <Method name="Ultimo" returnType="Nodo" visibility="private"/>
+        <Method name="agregar" returnType="void" visibility="public">
+          <Argument type="Nodo" name="nuevo"/>
+        </Method>
+        <Method name="agregarEntreNodos" returnType="void" visibility="public">
+          <Argument type="Nodo" name="nd"/>
+          <Argument type="Nodo" name="nuevo"/>
+        </Method>
+        <Method name="agregarAcabeza" returnType="void" visibility="public">
+          <Argument type="Nodo" name="nuevo"/>
+        </Method>
+        <Method name="buscar" returnType="Nodo" visibility="public">
+          <Argument type="int" name="ide"/>
+        </Method>
+        <Method name="buscar" returnType="Nodo" visibility="public">
+          <Argument type="String" name="nom"/>
+        </Method>
+        <Method name="anterior" returnType="Nodo" visibility="private">
+          <Argument type="Nodo" name="nd"/>
+        </Method>
+        <Method name="eliminar" returnType="void" visibility="public">
+          <Argument type="Nodo" name="nd"/>
+        </Method>
+        <Method name="buscarCurso" returnType="Nodo" visibility="public"/>
+        <Method name="mayor" returnType="int" visibility="private">
+          <Argument type="String" name="curso"/>
+        </Method>
+        <Method name="MayoresCurso" returnType="String" visibility="public">
+          <Argument type="String" name="curso"/>
+        </Method>
+        <Method name="mujeresquinto" returnType="String" visibility="public"/>
+        <Method name="cantidadMujeres" returnType="int" visibility="public"/>
+        <Method name="PromedioEdad" returnType="float" visibility="public"/>
+        <Method name="cantidadhombresprim" returnType="int" visibility="public"/>
+        <Method name="cantidadmujeresprim" returnType="int" visibility="public"/>
+        <Method name="Listado" returnType="String" visibility="public">
+          <Argument type="String" name="curso"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="main" package="" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="llenar" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Nodo" name="nd"/>
+        </Method>
+        <Method name="menu" returnType="int" visibility="public" isStatic="true"/>
+        <Method name="mostrar" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Nodo" name="nd"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Nodo" package="" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="identificacion" type="int" visibility="private"/>
+        <Field name="sexo" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="curso" type="String" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+        <Field name="siguiente" type="Nodo" visibility="private"/>
+        <Field name="anterior" type="Nodo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nom"/>
+        </Method>
+        <Method name="getIdentificacion" returnType="int" visibility="public"/>
+        <Method name="setIdentificacion" returnType="void" visibility="public">
+          <Argument type="int" name="ide"/>
+        </Method>
+        <Method name="getSexo" returnType="String" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="String" name="sex"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="ed"/>
+        </Method>
+        <Method name="getCurso" returnType="String" visibility="public"/>
+        <Method name="setCurso" returnType="void" visibility="public">
+          <Argument type="String" name="cur"/>
+        </Method>
+        <Method name="getEstado" returnType="String" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="String" name="est"/>
+        </Method>
+        <Method name="getSiguiente" returnType="Nodo" visibility="public"/>
+        <Method name="setSiguiente" returnType="void" visibility="public">
+          <Argument type="Nodo" name="sig"/>
+        </Method>
+        <Method name="getAnterior" returnType="Nodo" visibility="public"/>
+        <Method name="setAnterior" returnType="void" visibility="public">
+          <Argument type="Nodo" name="ant"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="anterior" source="Nodo" target="Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cabeza" source="Lista_Enlasada_Dobles" target="Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="siguiente" source="Nodo" target="Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="main" target="Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Lista_Enlasada_Dobles" target="Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Nodo" target="Nodo" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
