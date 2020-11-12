@@ -17,6 +17,12 @@ public class CuentaNomina extends Cuenta {
     public CuentaNomina() {
     }
 
+    public CuentaNomina(float SalarioMensual, String Empresa, int Numero, String Propietario, int IDpropietario) {
+        super(Numero, Propietario, IDpropietario);
+        this.SalarioMensual = SalarioMensual;
+        this.Empresa = Empresa;
+    }
+
     public float getSalarioMensual() {
         return SalarioMensual;
     }

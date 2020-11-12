@@ -18,6 +18,12 @@ public class Cuenta {
     public Cuenta() {
     }
 
+    public Cuenta(int Numero, String Propietario, int IDpropietario) {
+        this.Numero = Numero;
+        this.Propietario = Propietario;
+        this.IDpropietario = IDpropietario;
+    }
+
     public int getNumero() {
         return Numero;
     }

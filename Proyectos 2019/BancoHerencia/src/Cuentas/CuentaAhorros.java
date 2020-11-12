@@ -17,6 +17,12 @@ public class CuentaAhorros extends Cuenta {
     public CuentaAhorros() {
     }
 
+    public CuentaAhorros(float Saldo, int Tarjeta, int Numero, String Propietario, int IDpropietario) {
+        super(Numero, Propietario, IDpropietario);
+        this.Saldo = Saldo;
+        this.Tarjeta = Tarjeta;
+    }
+    
     public float getSaldo() {
         return Saldo;
     }

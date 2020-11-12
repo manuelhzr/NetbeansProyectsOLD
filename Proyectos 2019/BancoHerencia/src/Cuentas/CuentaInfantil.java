@@ -17,6 +17,12 @@ public class CuentaInfantil extends Cuenta {
     public CuentaInfantil() {
     }
 
+    public CuentaInfantil(String Representante, int IDrepresentante, int Numero, String Propietario, int IDpropietario) {
+        super(Numero, Propietario, IDpropietario);
+        this.Representante = Representante;
+        this.IDrepresentante = IDrepresentante;
+    }
+
     public String getRepresentante() {
         return Representante;
     }
