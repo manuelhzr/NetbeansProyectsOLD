@@ -200,9 +200,9 @@ public class Registrar extends javax.swing.JFrame {
         jLabel6.setText("Empresa: ");
     }//GEN-LAST:event_jRadioButton3ActionPerformed
 
-    private void Registrar(){
+    private void Registrar() {
         if (jRadioButton2.isSelected()) {
-            CuentaAhorros obj= new CuentaAhorros();
+            CuentaAhorros obj = new CuentaAhorros();
             obj.setNumero(Integer.parseInt(jTextField1.getText()));
             obj.setPropietario(jTextField2.getText());
             obj.setIDpropietario(Integer.parseInt(jTextField3.getText()));
@@ -212,7 +212,7 @@ public class Registrar extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Cuenta de ahorros registrada");
         }
         if (jRadioButton1.isSelected()) {
-            CuentaInfantil obj= new CuentaInfantil();
+            CuentaInfantil obj = new CuentaInfantil();
             obj.setNumero(Integer.parseInt(jTextField1.getText()));
             obj.setPropietario(jTextField2.getText());
             obj.setIDpropietario(Integer.parseInt(jTextField3.getText()));
@@ -221,9 +221,9 @@ public class Registrar extends javax.swing.JFrame {
             Principal.banco.InsertarInfantil(obj);
             JOptionPane.showMessageDialog(rootPane, "Cuenta infantil registrada");
         }
-        
+
         if (jRadioButton3.isSelected()) {
-            CuentaNomina obj= new CuentaNomina();
+            CuentaNomina obj = new CuentaNomina();
             obj.setNumero(Integer.parseInt(jTextField1.getText()));
             obj.setPropietario(jTextField2.getText());
             obj.setIDpropietario(Integer.parseInt(jTextField3.getText()));
@@ -234,6 +234,7 @@ public class Registrar extends javax.swing.JFrame {
         }
         dispose();
     }
+
     /**
      * @param args the command line arguments
      */

@@ -182,37 +182,38 @@ public class Buscar extends javax.swing.JFrame {
         buscar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void buscar(){
-        int dato=Integer.parseInt(jTextField1.getText());
+    private void buscar() {
+        int dato = Integer.parseInt(jTextField1.getText());
         if (jRadioButton2.isSelected()) {
-            int res= Principal.banco.buscarAhorros(dato);
-            if (res!=-1) {
+            int res = Principal.banco.buscarAhorros(dato);
+            if (res != -1) {
                 jTextField2.setText(String.valueOf(Principal.banco.getAhorros(res).getNumero()));
                 jTextField3.setText(String.valueOf(Principal.banco.getAhorros(res).getPropietario()));
                 jTextField4.setText(String.valueOf(Principal.banco.getAhorros(res).getIDpropietario()));
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(rootPane, "No se encuentra la cuenta");
             }
-        }else if (jRadioButton1.isSelected()) {
-            int res= Principal.banco.buscarInfantil(dato);
-            if (res!=-1) {
+        } else if (jRadioButton1.isSelected()) {
+            int res = Principal.banco.buscarInfantil(dato);
+            if (res != -1) {
                 jTextField2.setText(String.valueOf(Principal.banco.getInfantil(res).getNumero()));
                 jTextField3.setText(String.valueOf(Principal.banco.getInfantil(res).getPropietario()));
                 jTextField4.setText(String.valueOf(Principal.banco.getInfantil(res).getIDpropietario()));
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(rootPane, "No se encuentra la cuenta");
             }
-        }else  if (jRadioButton3.isSelected()) {
-            int res= Principal.banco.buscarNomina(dato);
-            if (res!=-1) {
+        } else if (jRadioButton3.isSelected()) {
+            int res = Principal.banco.buscarNomina(dato);
+            if (res != -1) {
                 jTextField2.setText(String.valueOf(Principal.banco.getNomina(res).getNumero()));
                 jTextField3.setText(String.valueOf(Principal.banco.getNomina(res).getPropietario()));
                 jTextField4.setText(String.valueOf(Principal.banco.getNomina(res).getIDpropietario()));
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(rootPane, "No se encuentra la cuenta");
             }
         }
     }
+
     /**
      * @param args the command line arguments
      */

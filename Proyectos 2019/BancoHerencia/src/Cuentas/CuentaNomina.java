@@ -9,7 +9,8 @@ package Cuentas;
  *
  * @author manue
  */
-public class CuentaNomina extends Cuenta{
+public class CuentaNomina extends Cuenta {
+
     private float SalarioMensual;
     private String Empresa;
 
@@ -31,5 +32,5 @@ public class CuentaNomina extends Cuenta{
     public void setEmpresa(String Empresa) {
         this.Empresa = Empresa;
     }
-    
+
 }

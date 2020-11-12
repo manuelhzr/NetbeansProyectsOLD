@@ -132,38 +132,39 @@ public class Eliminar extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void eliminar(){
-        int dato=Integer.parseInt(jTextField1.getText());
+    private void eliminar() {
+        int dato = Integer.parseInt(jTextField1.getText());
         if (jRadioButton2.isSelected()) {
-            int res= Principal.banco.buscarAhorros(dato);
-            if (res!=-1) {
+            int res = Principal.banco.buscarAhorros(dato);
+            if (res != -1) {
                 Principal.banco.setAhorros(res, null);
                 JOptionPane.showMessageDialog(rootPane, "Cuenta eliminada");
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(rootPane, "No se encuentra la cuenta");
             }
         }
-        
+
         if (jRadioButton1.isSelected()) {
-            int res= Principal.banco.buscarInfantil(dato);
-            if (res!=-1) {
+            int res = Principal.banco.buscarInfantil(dato);
+            if (res != -1) {
                 Principal.banco.setInfantil(res, null);
                 JOptionPane.showMessageDialog(rootPane, "Cuenta eliminada");
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(rootPane, "No se encuentra la cuenta");
             }
         }
-        
+
         if (jRadioButton3.isSelected()) {
-            int res= Principal.banco.buscarNomina(dato);
-            if (res!=-1) {
+            int res = Principal.banco.buscarNomina(dato);
+            if (res != -1) {
                 Principal.banco.setNomina(res, null);
                 JOptionPane.showMessageDialog(rootPane, "Cuenta eliminada");
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(rootPane, "No se encuentra la cuenta");
             }
         }
     }
+
     /**
      * @param args the command line arguments
      */

@@ -9,7 +9,8 @@ package Cuentas;
  *
  * @author manue
  */
-public class CuentaInfantil extends Cuenta{
+public class CuentaInfantil extends Cuenta {
+
     private String Representante;
     private int IDrepresentante;
 
@@ -32,7 +33,4 @@ public class CuentaInfantil extends Cuenta{
         this.IDrepresentante = IDrepresentante;
     }
 
-   
-
-    
 }

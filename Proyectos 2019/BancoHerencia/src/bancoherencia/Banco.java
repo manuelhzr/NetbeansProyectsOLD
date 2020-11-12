@@ -14,8 +14,9 @@ import Cuentas.CuentaNomina;
  * @author manue
  */
 public class Banco {
+
     public static final int maxCuentas = 25;
-    
+
     private CuentaAhorros[] Ahorros;
     private CuentaInfantil[] Infantil;
     private CuentaNomina[] Nomina;
@@ -25,7 +26,7 @@ public class Banco {
         Ahorros = new CuentaAhorros[maxCuentas];
         Infantil = new CuentaInfantil[maxCuentas];
         Nomina = new CuentaNomina[maxCuentas];
-        
+
         iniciarCuentas();
     }
 
@@ -60,61 +61,62 @@ public class Banco {
     public void setNomina(int pos, CuentaNomina Nomina) {
         this.Nomina[pos] = Nomina;
     }
-    
-    public int buscarAhorros(int numero){
+
+    public int buscarAhorros(int numero) {
         for (int i = 0; i < maxCuentas; i++) {
-            if (getAhorros(i).getNumero()== numero) {
+            if (getAhorros(i).getNumero() == numero) {
                 return i;
             }
         }
-        
+
         return -1;
     }
-    
-    public int buscarInfantil(int numero){
+
+    public int buscarInfantil(int numero) {
         for (int i = 0; i < maxCuentas; i++) {
-            if (getInfantil(i).getNumero()== numero) {
+            if (getInfantil(i).getNumero() == numero) {
                 return i;
             }
         }
-        
+
         return -1;
     }
-    
-    public int buscarNomina(int numero){
+
+    public int buscarNomina(int numero) {
         for (int i = 0; i < maxCuentas; i++) {
-            if (getNomina(i).getNumero()== numero) {
+            if (getNomina(i).getNumero() == numero) {
                 return i;
             }
         }
-        
+
         return -1;
     }
-    
-    public void InsertarAhorros(CuentaAhorros nuevo){
+
+    public void InsertarAhorros(CuentaAhorros nuevo) {
         for (int i = 0; i < maxCuentas; i++) {
-            if (Ahorros[i]==null) {
+            if (Ahorros[i] == null) {
                 setAhorros(i, nuevo);
                 break;
             }
         }
     }
-    
-        public void InsertarInfantil(CuentaInfantil nuevo){
+
+    public void InsertarInfantil(CuentaInfantil nuevo) {
         for (int i = 0; i < maxCuentas; i++) {
-            if (Infantil[i]==null) {
+            if (Infantil[i] == null) {
                 setInfantil(i, nuevo);
                 break;
             }
         }
     }
-            public void InsertarNomina(CuentaNomina nuevo){
+
+    public void InsertarNomina(CuentaNomina nuevo) {
         for (int i = 0; i < maxCuentas; i++) {
-            if (Nomina[i]==null) {
+            if (Nomina[i] == null) {
                 setNomina(i, nuevo);
                 break;
             }
         }
     }
-    
+
 }

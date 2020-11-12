@@ -9,7 +9,8 @@ package Cuentas;
  *
  * @author manue
  */
-public  class Cuenta {
+public class Cuenta {
+
     private int Numero;
     private String Propietario;
     private int IDpropietario;
@@ -40,6 +41,5 @@ public  class Cuenta {
     public void setIDpropietario(int IDpropietario) {
         this.IDpropietario = IDpropietario;
     }
-    
-    
+
 }

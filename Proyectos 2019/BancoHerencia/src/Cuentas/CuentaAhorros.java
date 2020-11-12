@@ -5,13 +5,12 @@
  */
 package Cuentas;
 
-
 /**
  *
  * @author manue
  */
-public class CuentaAhorros extends Cuenta{
-    
+public class CuentaAhorros extends Cuenta {
+
     private float Saldo;
     private int Tarjeta;
 
@@ -34,9 +33,4 @@ public class CuentaAhorros extends Cuenta{
         this.Tarjeta = Tarjeta;
     }
 
-    
-
-
-    
-    
 }
